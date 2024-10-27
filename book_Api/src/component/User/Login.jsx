@@ -1,23 +1,60 @@
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
+import { useState } from "react";
 
 const Login = () => {
+  const [userLog, setUserlog] = useState({
+    email: "",
+    password: "",
+  });
+  //  input handeling
+  const handleLog = (e) => {
+    setUserlog({
+      ...userLog,
+      [e.target.name]: e.target.value,
+    });
+  };
+  // form handeling
+  const handleFormLogin = async(e) => {
+    e.perventDefault();
+    try {
+      const respons = await fetch(`http://localhost:3030/api/users/login`,{
+        method:'POST',
+        headers:{
+          'Contant-Type':'application/json',
+        },
+        body:JSON.stringify(userLog),
+      })
+      const resData = await respons.json();
+      console(resData);
+      if(respons.ok){
+        console.log('Registion Sussful ')
+      }
+    } catch (error) {
+      console.log(error)
+    }
+  };
   return (
     <div className="container mt-5">
       <div className="row">
         {/* Left Column: Login Form */}
         <div className="col-12 col-md-6 d-flex flex-column justify-content-center">
-          {" "}
+         
           {/* Adjusted for mobile */}
           <h1 className="text-center" style={{ width: "75%" }}>
             Login
           </h1>
-          <div className="d-flex flex-column gap-3 p-5">
+          <form
+            onSubmit={handleFormLogin}
+            className="d-flex flex-column gap-3 p-5"
+          >
             <TextField
               id="email"
-              label="Email"
+              label="email"
               name="email"
               variant="outlined"
+              value={userLog.email}
+              onChange={handleLog}
               required
               style={{ width: "75%" }} // Full width to be responsive
             />
@@ -26,6 +63,8 @@ const Login = () => {
               label="Password"
               name="password"
               variant="outlined"
+              value={userLog.password}
+              onChange={handleLog}
               required
               type="password"
               style={{ width: "75%" }} // Full width to be responsive
@@ -44,7 +83,7 @@ const Login = () => {
                 Login
               </Button>
             </div>
-          </div>
+          </form>
         </div>
 
         {/* Right Column: Image */}

@@ -19,7 +19,7 @@ const Register = () => {
   };
 
   // Form handling
-  const formHandling = async (e) => {
+  const handleFormSignIn = async (e) => {
     e.preventDefault();
     try {
       const response = await fetch(`http://localhost:3030/api/users/register`, {
@@ -45,7 +45,7 @@ const Register = () => {
             Sign Up
           </h1>
 
-          <form onSubmit={formHandling} className="d-flex flex-column gap-3 p-5">
+          <form onSubmit={handleFormSignIn} className="d-flex flex-column gap-3 p-5">
             <TextField
               id="username"
               label="Username"

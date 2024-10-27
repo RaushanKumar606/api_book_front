@@ -1,0 +1,15 @@
+.footer {
+    background-color: rgb(43, 207, 129);
+    color: white;
+    padding-top: 5rem; /* Add padding at the top */
+    padding-bottom: 5rem; /* Add padding at the bottom */
+    text-align: center; /* Center text in footer */
+  }
+  .footer a {
+    color: white; /* Set link color to white */
+    transition: color 0.3s; /* Smooth transition for hover effect */
+  }
+  .footer a:hover {
+    color: rgba(255, 255, 255, 0.8); /* Slightly transparent on hover */
+  }
+  
