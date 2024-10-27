@@ -8,7 +8,10 @@ import { Register } from './component/User/Register'
 import { Contact } from './component/Home/Contact'
 import { Footer } from './component/Footer'
 import { NavBar } from './component/Navbar/Navbar'
-
+import { Book } from './component/Books/Book';
+import { Author } from './component/Authors/Author';
+import { Subject } from './component/Subject/Subject';
+import { Home } from './component/Home/Home';
 function App() {
   
 
@@ -17,8 +20,12 @@ function App() {
         <BrowserRouter>
         <NavBar/>
         <Routes>
+        <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/books" element={<Book/>} />
+        <Route path="/authors" element={<Author />} />
+        <Route path="/subjects" element={<Subject />} />
         <Route path="/contact" element={<Contact />} />
         </Routes>
         <Footer/>

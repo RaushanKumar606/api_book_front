@@ -1,10 +1,10 @@
-const Home =()=>{
+const UserProfile=()=>{
     return(
         <div>
             <h1>
-                Home
+                UserProfile
             </h1>
         </div>
     )
 }
-export {Home}
+export{UserProfile}
