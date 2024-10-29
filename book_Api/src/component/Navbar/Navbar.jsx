@@ -53,7 +53,7 @@ const NavBar = () => {
               <NavDropdown.Item href="/register">Sign up</NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item href="/account">Your Account</NavDropdown.Item>
-              <NavDropdown.Item href="/settings">Personal Settings</NavDropdown.Item>
+              <NavDropdown.Item href="/create">Add Book</NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item href="/logout">Log out</NavDropdown.Item>
             </NavDropdown>

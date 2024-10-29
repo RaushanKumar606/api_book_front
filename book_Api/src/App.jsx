@@ -12,6 +12,7 @@ import { Book } from './component/Books/Book';
 import { Author } from './component/Authors/Author';
 import { Subject } from './component/Subject/Subject';
 import { Home } from './component/Home/Home';
+import { CreateBook } from './component/Books/CreateBook';
 function App() {
   
 
@@ -27,6 +28,7 @@ function App() {
         <Route path="/authors" element={<Author />} />
         <Route path="/subjects" element={<Subject />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/create" element={<CreateBook />} />
         </Routes>
         <Footer/>
         </BrowserRouter>
