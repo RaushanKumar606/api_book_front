@@ -1,8 +1,13 @@
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import { useState } from "react";
+import {  useNavigate } from 'react-router-dom';
+
 
 const Login = () => {
+
+  const navigate = useNavigate();
+
   const [userLog, setUserlog] = useState({
     email: "",
     password: "",
@@ -18,7 +23,7 @@ const Login = () => {
   const handleFormLogin = async(e) => {
     e.perventDefault();
     try {
-      const respons = await fetch(`http://localhost:3030/api/users/login`,{
+      const respons = await fetch(`http://localhost:8080/api/users/login`,{
         method:'POST',
         headers:{
           'Contant-Type':'application/json',
@@ -28,7 +33,11 @@ const Login = () => {
       const resData = await respons.json();
       console(resData);
       if(respons.ok){
-        console.log('Registion Sussful ')
+        
+        console.log('login Sussful ')
+       
+
+        navigate("/")
       }
     } catch (error) {
       console.log(error)
@@ -56,7 +65,7 @@ const Login = () => {
               value={userLog.email}
               onChange={handleLog}
               required
-              style={{ width: "75%" }} // Full width to be responsive
+              style={{ width: "75%" }} 
             />
             <TextField
               id="password"
@@ -67,7 +76,7 @@ const Login = () => {
               onChange={handleLog}
               required
               type="password"
-              style={{ width: "75%" }} // Full width to be responsive
+              style={{ width: "75%" }}
             />
 
             {/* Button with 25% left and right spacing */}
