@@ -1,0 +1,33 @@
+.service-section {
+  padding: 20px;
+}
+
+.card {
+  margin-bottom: 20px; /* Space between cards */
+  border: 1px solid #ddd; /* Card border */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.card-img {
+  height: 150px; /* Fixed height for consistency */
+  overflow: hidden; /* Crop any overflow */
+}
+
+.card-img img {
+  width: 100%;
+  height: auto; /* Maintain aspect ratio */
+}
+
+.card-detail {
+  padding: 15px;
+}
+
+.book-details-card {
+  background-size: cover;
+  background-position: center;
+  height: 400px; /* Adjust height as needed */
+  border-radius: 10px; /* Optional: for rounded corners */
+ /* Optional: padding for content inside */
+  color: white; /* Optional: text color for better visibility */
+}

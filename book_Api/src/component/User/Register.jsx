@@ -1,8 +1,9 @@
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import { useState } from "react";
-
+import {  useNavigate } from 'react-router-dom';
 const Register = () => {
+  const navigate = useNavigate();
   const [user, setUser] = useState({
     username: "",
     email: "",
@@ -22,7 +23,7 @@ const Register = () => {
   const handleFormSignIn = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch(`http://localhost:3030/api/users/register`, {
+      const response = await fetch(`http://localhost:8080/api/users/register`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -31,6 +32,10 @@ const Register = () => {
       });
       const resData = await response.json();
       console.log(resData);
+      if(response.ok){
+        setUser({username:"",email:"",mobile:"",password:""})
+        navigate("/login")
+      }
     } catch (error) {
       console.log(error);
     }
@@ -87,11 +92,12 @@ const Register = () => {
               type="password"
               fullWidth
             />
-            <Button
+
+               <Button
               variant="contained"
               color="success"
-              type="submit" // Ensure button submits the form
-              style={{ width: "50%", margin: "0 auto" }} // Center button
+              type="submit" 
+              
             >
               Submit
             </Button>

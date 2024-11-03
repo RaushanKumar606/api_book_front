@@ -49,16 +49,16 @@ const Footer = () => {
             <h5>Discover</h5>
             <ul className="list-unstyled">
               <li>
-                <a href="#home">Home</a>
+                <a href="/">Home</a>
               </li>
               <li>
-                <a href="#books">Books</a>
+                <a href="/books">Books</a>
               </li>
               <li>
-                <a href="#authors">Authors</a>
+                <a href="/authors">Authors</a>
               </li>
               <li>
-                <a href="#subjects">Subjects</a>
+                <a href="/subjects">Subjects</a>
               </li>
               <li>
                 <a href="#collections">Collections</a>
@@ -93,7 +93,7 @@ const Footer = () => {
                 <a href="#help-center">Help Center</a>
               </li>
               <li>
-                <a href="#add-book">Add a Book</a>
+                <a href="/create">Add a Book</a>
               </li>
               <li>
                 <a href="#release-notes">Release Notes</a>

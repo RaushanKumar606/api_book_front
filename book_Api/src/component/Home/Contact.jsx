@@ -14,10 +14,26 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async(e) => {
     e.preventDefault();
-    console.log("Contact Form Data:", contact);
-    // Add logic to send the contact data to a server,
+    try {
+       const respons = await fetch (`http://localhost:3030/api/users/contact`,{
+        method:"POST",
+        headers:{
+          'Contact-Type':'application/json'
+        },
+        body:JSON.stringify(contact)
+       })
+       if(respons.ok){
+        setContact({username:'',email:'',comment:''});
+
+       }
+       else{
+        alert("msg not send ")
+       }
+    } catch (error) {
+       console.log(error)
+    }
   };
 
   return (

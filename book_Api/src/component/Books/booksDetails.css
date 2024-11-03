@@ -1,0 +1,41 @@
+.book-details-section {
+    padding: 20px;
+  }
+  
+  .book-details-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+  }
+  
+  .left-section img {
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+  }
+  
+  .card-body {
+    padding: 15px;
+  }
+  
+  .book-title {
+    font-size: 1.5em;
+    margin: 0;
+    color: #333;
+  }
+  
+  .book-genre,
+  .book-ISBN,
+  .book-publishedYear,
+  .book-language {
+    font-size: 1em;
+    color: #555;
+    margin: 5px 0;
+  }
+  
+  .book-summary {
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 10px;
+  }
+

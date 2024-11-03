@@ -1,6 +1,5 @@
 
-import './App.css'
-import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { Login } from './component/User/Login'
@@ -13,6 +12,7 @@ import { Author } from './component/Authors/Author';
 import { Subject } from './component/Subject/Subject';
 import { Home } from './component/Home/Home';
 import { CreateBook } from './component/Books/CreateBook';
+import { BookDetails } from './component/Books/BookDetails'
 function App() {
   
 
@@ -29,6 +29,7 @@ function App() {
         <Route path="/subjects" element={<Subject />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/create" element={<CreateBook />} />
+        <Route path="/book/:id" element={<BookDetails />} />
         </Routes>
         <Footer/>
         </BrowserRouter>

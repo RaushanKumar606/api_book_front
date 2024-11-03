@@ -37,8 +37,9 @@ const NavBar = () => {
               style={{ width: '100%' }}
               className="me-2"
             />
-            <Button variant="outline-success" type="submit">Search</Button>
+              {/* <Button variant="outline-success" type="submit">Search</Button> */}
           </Form>
+       
 
           {/* Navigation Links */}
           <Nav className="ms-auto text-center text-lg-start">
