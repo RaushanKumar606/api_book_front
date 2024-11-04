@@ -13,6 +13,7 @@ import { Subject } from './component/Subject/Subject';
 import { Home } from './component/Home/Home';
 import { CreateBook } from './component/Books/CreateBook';
 import { BookDetails } from './component/Books/BookDetails'
+import { BooksQuery } from './component/Books/BooksQuery'
 function App() {
   
 
@@ -25,6 +26,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/books" element={<Book/>} />
+        <Route path="/query" element={<BooksQuery />} />
         <Route path="/authors" element={<Author />} />
         <Route path="/subjects" element={<Subject />} />
         <Route path="/contact" element={<Contact />} />

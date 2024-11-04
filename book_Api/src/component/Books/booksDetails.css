@@ -39,3 +39,22 @@
     margin-top: 10px;
   }
 
+
+
+  /* BOOKS QUERY IN CSS  */
+
+  .gradient-text {
+    display: inline-block; 
+    background: linear-gradient(to right, #50535b, #feb47b); 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+    text-align: center; 
+    font-size: 2rem;
+    margin: 0 auto; 
+  }
+  
+  h2 {
+    text-align: center; 
+    margin-bottom: 1rem;
+  }
+  

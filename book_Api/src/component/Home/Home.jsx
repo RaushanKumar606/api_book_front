@@ -51,23 +51,13 @@ const Home = () => {
   return (
     <div className="container">
     
-    <div
-            className="slider"
-            style={{
-                position: 'relative',
-                width: '100%',
-                margin: '0 auto',
-                overflow: 'hidden',
-            }}
-        >
+    <div className="slider">
             <div
-                className="slides mt-5 gap-"
+                className="slides"
                 style={{
                     display: 'flex',
                     transition: 'transform 0.5s ease-in-out',
-                    transform: `translateX(-${currentSlide * 100}%)`,
-                    
-                    boxSizing: 'border-box',
+                    transform: `translateX(-${currentSlide * (100 / (window.innerWidth > 768 ? images.length : 1))}%)`,
                 }}
             >
                 {images.map((image, index) => (
@@ -75,9 +65,9 @@ const Home = () => {
                         key={index}
                         className="card"
                         style={{
-                            width: '100%',
+                            flex: '0 0 auto',
+                            width: window.innerWidth > 768 ? `${100 / images.length}%` : '100%',
                             textAlign: 'center',
-                            margin: '0 5px', // Margin between cards
                         }}
                     >
                         <img
@@ -96,6 +86,7 @@ const Home = () => {
             <button className="prev" onClick={prevSlide}>&#10094;</button>
             <button className="next" onClick={nextSlide}>&#10095;</button>
         </div>
+
      
       <div className="row m-0 p-0 mt-5">
         <img

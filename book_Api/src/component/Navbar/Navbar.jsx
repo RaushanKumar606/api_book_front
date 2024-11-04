@@ -14,11 +14,11 @@ const NavBar = () => {
     <Navbar bg="light" expand="lg" className="p-3">
       <Container fluid>
         {/* Logo/Image Section */}
-        <Navbar.Brand href="#home" className="me-auto">
+        <Navbar.Brand href="/" className="me-auto">
           <img 
-            src="https://via.placeholder.com/100x40" 
+            src="/Image/logo1.jpg" 
             alt="Open Library Logo"
-            style={{ maxWidth: '100px' }}
+            style={{ maxWidth: '80px',borderRadius:'50%' }}
           />
         </Navbar.Brand>
 

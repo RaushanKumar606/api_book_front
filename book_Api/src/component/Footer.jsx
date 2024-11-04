@@ -8,11 +8,16 @@ const Footer = () => {
         <div className="row text-center">
           {/* Column for Image */}
           <div className="col-md-2 mb-4 d-flex justify-content-center ">
+            <a href="/">
             <img
-              src="https://via.placeholder.com/100" // Replace with your image URL
+              src="/Image/logo1.jpg" 
               alt="Open Library Logo"
-              className="img-fluid" // Responsive image
+              style={{ maxWidth: '100px',borderRadius:'50%',height:'100px' }}
+              
             />
+            </a>
+           
+
           </div>
 
           {/* Column 1: Open Library Links */}
@@ -102,7 +107,7 @@ const Footer = () => {
                 <a href="#suggest-edits">Suggesting Edits</a>
               </li>
               <li>
-                <a href="#report-problem">Report A Problem</a>
+                <a href="/query">Report A Problem</a>
               </li>
             </ul>
           </div>
@@ -135,14 +140,14 @@ const Footer = () => {
     <div className="col d-flex justify-content-end"> {/* Align icons to the right */}
       <div className="d-flex gap-4"> {/* Add gap-4 class here */}
         <a
-          href="https://facebook.com"
+        href="#"
           target="_blank"
           rel="noopener noreferrer"
         >
           <i className="fab fa-facebook fa-lg"></i>
         </a>
         <a
-          href="https://twitter.com"
+          href="#"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -156,7 +161,7 @@ const Footer = () => {
           <i className="fab fa-youtube fa-lg"></i>
         </a>
         <a
-          href="https://linkedin.com"
+       href="#"
           target="_blank"
           rel="noopener noreferrer"
         >

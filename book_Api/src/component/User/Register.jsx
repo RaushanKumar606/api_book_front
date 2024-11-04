@@ -1,4 +1,4 @@
-import TextField from "@mui/material/TextField";
+import './register.css'
 import Button from "@mui/material/Button";
 import { useState } from "react";
 import {  useNavigate } from 'react-router-dom';
@@ -40,81 +40,73 @@ const Register = () => {
       console.log(error);
     }
   };
-
   return (
-    <div className="container mt-5">
-      <div className="row">
-        {/* Sign Up Form - Left Column */}
-        <div className="col-md-6 d-flex flex-column justify-content-center">
-          <h1 className="text-center" style={{ width: "75%" }}>
-            Sign Up
-          </h1>
-
-          <form onSubmit={handleFormSignIn} className="d-flex flex-column gap-3 p-5">
-            <TextField
-              id="username"
-              label="Username"
-              name="username"
-              variant="outlined"
-              value={user.username}
-              onChange={handleChange}
-              required
-              fullWidth
-            />
-            <TextField
-              id="email"
-              label="Email"
-              name="email"
-              variant="outlined"
-              value={user.email}
-              onChange={handleChange}
-              required
-              fullWidth
-            />
-            <TextField
-              id="phone"
-              label="Phone"
-              name="phone"
-              variant="outlined"
-              value={user.phone}
-              onChange={handleChange}
-              required
-              fullWidth
-            />
-            <TextField
-              id="password"
-              label="Password"
-              name="password"
-              variant="outlined"
-              value={user.password}
-              onChange={handleChange}
-              required
-              type="password"
-              fullWidth
-            />
-
-               <Button
-              variant="contained"
-              color="success"
-              type="submit" 
-              
-            >
-              Submit
-            </Button>
-          </form>
+    <div className="registration-form-container">
+      <div className="registration-form">
+        <div className="logo treanding">
+          <img src="Images/treanding.png" alt="King Logo" />
         </div>
-
-        {/* Image - Right Column */}
-        <div className="col-md-6 d-flex align-items-center justify-content-center">
-          <img
-            src="https://via.placeholder.com/400x400" 
-            alt="Sign Up Illustration"
-            className="img-fluid" 
+        <h2>Welcome</h2>
+        <p>Register now, it&quot;s free!</p>
+        <form onSubmit={handleFormSignIn}>
+          <input
+            type="text"
+            name="fullName"
+            placeholder="Full Name"
+            value={user.fullName}
+            onChange={handleChange}
+            required
           />
-        </div>
+          <input
+            type="email"
+            name="email"
+            placeholder="Email Address"
+            value={user.email}
+            onChange={handleChange}
+            required
+          />
+          <input
+            type="number"
+            name="number"
+            placeholder="number"
+            value={user.number}
+            onChange={handleChange}
+            required
+          />
+         
+         <input
+            type="password"
+            name="password"
+            placeholder="Password"
+            value={user.password}
+            onChange={handleChange}
+            required
+          />
+          <div className="form-options">
+            <label>
+              <input
+                type="checkbox"
+                name="rememberMe"
+                checked={user.rememberMe}
+                onChange={handleChange}
+              />
+              Remember me
+            </label>
+            <a href="">Forgot Password?</a>
+          </div>
+          <Button
+                variant="contained"
+                color="success"
+                style={{ width: "50%", margin: "0 12%" }}
+              >
+                Login
+              </Button>
+        </form>
+        <p className="login-link">
+          Already a member? <a href="/login">Login</a>
+        </p>
       </div>
     </div>
   );
 };
-
 export { Register };

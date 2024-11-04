@@ -4,36 +4,33 @@
 body {
     font-family: Arial, sans-serif;
 }
-
 .slider {
     position: relative;
-    max-width: 100%; 
-    overflow: hidden;
-    margin: auto;
+    max-width: 1200px; /* Optional: limit the width of the slider */
+    margin: 0 auto; /* Center align the slider */
+    overflow: hidden; /* Hide overflow for the slider */
 }
 
 .slides {
     display: flex;
-    transition: transform 0.5s ease-in-out;
 }
 
 .card {
-    border: 1px solid #ccc; 
-    border-radius: 8px; 
-    overflow: hidden; 
-    background-color: #fff; 
-    text-align: center; 
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content vertically */
 }
 
 button {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.8);
     border: none;
-    padding: 10px;
     cursor: pointer;
-    font-size: 18px;
+    font-size: 2rem;
+    padding: 0.5rem;
+    opacity: 1;
 }
 
 .prev {
@@ -42,4 +39,37 @@ button {
 
 .next {
     right: 10px;
+}
+
+/* Responsive styling */
+@media (max-width: 667px) {
+    .slides {
+        flex-direction: row; 
+        align-items: center; /* Stack images on top of each other for small devices */
+    }
+    .card {
+        width: 100%; /* Make each card take the full width on mobile */
+    }
+
+    button {
+        font-size: 1.5rem;
+        opacity: 0; /* Adjust button size for better visibility on mobile */
+    }
+}
+
+@media (max-width: 768px) {
+    .slides {
+        flex-direction: column; /* Stack images on top of each other for small devices */
+        align-items: center; /* Center align items if needed */
+    }
+    .card {
+        width: 100%; /* Make each card take the full width on mobile */
+    }
+
+    button {
+        font-size: 1.5rem;
+        opacity: 0; 
+    }
+
+   
 }
